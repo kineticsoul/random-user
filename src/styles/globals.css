@@ -1,14 +1,16 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
+:root {
+    --font-family: 'Ubuntu', sans-serif;
+    --background: rgb(45, 47, 49);
     --foreground: #ededed;
+    --bottom-background: rgb(249, 249, 249);
+    --super-white: rgb(255,255,255);
+    --grey: rgb(217, 217, 217);
+    --info-label-grey: rgb(153, 153, 153);
+    --info-value-grey: rgb(44, 46, 49);
+    --selected-green: rgb(133, 185, 70);
   }
-}
 
 html,
 body {
@@ -16,12 +18,29 @@ body {
   overflow-x: hidden;
 }
 
+::selection{
+  background-color: var(--selected-green);
+  color: var(--super-white);
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--background) 0%,
+    var(--background) 45%,
+    var(--bottom-background) 45%,
+    var(--bottom-background) 100%
+  );
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-family), sans-serif;
 }
 
 * {

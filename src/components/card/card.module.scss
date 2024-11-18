@@ -1,0 +1,92 @@
+.card_wrapper{
+    color: var(--background);
+    background-color: var(--super-white);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    position: absolute;
+    top: 20%;
+    left: 28%;
+
+    .card_header{
+        background-color: var(--bottom-background);
+        height: 10em;
+        border-radius: 7px;
+        border-bottom: 1px solid var(--grey);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .profile_container {
+            border: 1px solid var(--info-label-grey);
+            border-radius: 50em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5em;
+            height: 10.5em;
+            width: 10.5em;
+            transform: translateY(2em);
+
+            .profile_image {
+                border-radius: 50em;
+                height: 10em;
+                width: 10em;
+            }
+        }
+    }
+
+    .card_body {
+        height: 15em;
+        padding: 3em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+
+        .details{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .info_label {
+                font-size: 18px;
+                color: var(--info-label-grey);
+                font-weight: 400;
+            }
+
+            .info_value {
+                font-size: 38px;
+                color: var(--info-value-grey);
+                font-weight: 500;
+            }
+        }
+        .icons {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 2em;
+
+            .icon_wrapper {
+                width: 3em;
+                display: flex;
+                justify-content: center;
+                padding: 0.5em;
+                overflow: hidden;
+                color: black;
+
+                 &.active {
+                    border-top: 2px solid var(--selected-green);
+                }
+
+                .icon {
+                    width: 2em;
+                    height: 2em;
+                }
+            }
+        }
+    }
+}
